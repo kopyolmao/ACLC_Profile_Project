@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.profile-container {
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Profile Picture Animation */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #6a00ff;
+    margin-bottom: 10px;
+    animation: swirl-in-fwd 0.6s ease-out both;
+}
+
+/* Profile Info Animation */
+.profile-info {
+    animation: fade-in-down 0.8s ease-in-out both;
+}
+
+.profile-info h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+}
+
+.profile-bio {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Profile Stats */
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.profile-stats span {
+    opacity: 0;
+    animation: fade-in-up 0.8s ease-in-out forwards;
+}
+
+.profile-stats span:nth-child(1) { animation-delay: 0.2s; }
+.profile-stats span:nth-child(2) { animation-delay: 0.4s; }
+.profile-stats span:nth-child(3) { animation-delay: 0.6s; }
+
+/* Interests Grid */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.interest-card {
+    background: #6a00ff;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+    animation: scale-in 0.6s ease-in-out forwards;
+}
+
+.interest-card:nth-child(1) { animation-delay: 0.2s; }
+.interest-card:nth-child(2) { animation-delay: 0.4s; }
+.interest-card:nth-child(3) { animation-delay: 0.6s; }
+.interest-card:nth-child(4) { animation-delay: 0.8s; }
+
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: slide-in-right 0.8s ease-in-out 1s forwards;
+}
+
+.contact-btn {
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact-btn:hover {
+    background: #0056b3;
+}
+
+/* ===================== Animations ===================== */
+
+/* Swirl-in animation for profile pic */
+@keyframes swirl-in-fwd {
+    0% {
+        transform: rotate(-540deg) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Fade-in from top for profile info */
+@keyframes fade-in-down {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Fade-in from bottom for stats */
+@keyframes fade-in-up {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Scale-in effect for interest cards */
+@keyframes scale-in {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Slide-in from right for contact buttons */
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Profile Name Animation */
+.profile-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    animation: tracking-in-contract 0.8s cubic-bezier(.215,.61,.355,1.000) both;
+}
+
+/* Tracking-in animation for name */
+@keyframes tracking-in-contract {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
