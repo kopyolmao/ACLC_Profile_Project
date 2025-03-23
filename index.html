@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sky Salvador</title>
+    <title>Sky Salvador - Developer Profile</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
     <div class="profile-container">
         <div class="profile-header">
-            <!-- Replace <img> with a div for the profile picture -->
             <div class="profile-pic"></div>
             <div class="profile-info">
                 <h1 class="profile-name">Sky Salvador</h1>
@@ -21,21 +21,29 @@
                 </div>
             </div>
         </div>
-
         <div class="interests-grid">
             <div class="interest-card">Game Development</div>
             <div class="interest-card">Web Development</div>
             <div class="interest-card">Merge & Contribute</div>
             <div class="interest-card">Open Source</div>
         </div>
-
         <div class="contact-buttons">
             <a href="mailto:skysalvador2004@gmail.com" class="contact-btn">Send an Email</a>
             <a href="tel:+63908649117" class="contact-btn">Call Me</a>
         </div>
     </div>
-
-    <!-- Link to the external JavaScript file -->
+    <div class="chat-bubble" id="chatBubble">💬</div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <h3>Sky Assistant</h3>
+            <button id="minimizeChat">−</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Ask about development...">
+            <button id="sendChat">➤</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
