@@ -220,7 +220,7 @@ body {
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
+    display: none;
     flex-direction: column;
     opacity: 0;
     transform: translateY(20px);
@@ -230,6 +230,7 @@ body {
 
 .chat-window.open {
     opacity: 1;
+    display: flex;
     transform: translateY(0);
 }
 
